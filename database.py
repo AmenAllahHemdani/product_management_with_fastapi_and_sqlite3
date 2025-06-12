@@ -24,6 +24,21 @@ def create_table(conn, query:str):
     except sqlite3.Error as e:
         print(f"Error creating table: {e}")
 
+def cleanup_database():
+    if os.path.exists(DATABASE_FILE):
+        os.remove(DATABASE_FILE)
+        print(f"Removed existing database file: {DATABASE_FILE}")
+
+if not os.path.exists(DATABASE_FILE):
+    print(f"Creating new database file: {DATABASE_FILE}")
+    _conn_init = get_db_connection()
+    if _conn_init:
+        create_product_table(_conn_init)
+        _conn_init.close()
+        _conn_init = None
+    else:
+        print("Could not create initial database file.")
+
 conn = connect_db()
 
 
