@@ -34,7 +34,7 @@ Follow these steps to get the project up and running on your local machine.
 1.  **Clone the repository (if applicable):**
 
     ```bash
-    git clone https://github.com/AmenAllahHemdani/product_management_with_fastapi_and_sqlite3.git
+    git clone https://github.com/AmenAllahHemdani/simple_product_management_with_fastapi_and_sqlite3.git
     ```
 
     (If you manually created the files, just navigate to your project directory.)
