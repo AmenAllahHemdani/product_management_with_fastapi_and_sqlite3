@@ -6,7 +6,7 @@ from models.Product import Product
 
 router = APIRouter(
     prefix="/add_Product",
-    tags=["Products"], 
+    tags=["add_Products"], 
 )
 
 @router.post("/", response_model=Product, status_code=status.HTTP_201_CREATED)
